@@ -7,6 +7,14 @@
 body {
   padding-top: 54px;
 }
+.card-body{
+    padding: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    text-align: center;
+}
 
 .card-text {
     margin-bottom: 0;
