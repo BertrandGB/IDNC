@@ -2,6 +2,11 @@ body {
   padding-top: 54px;
 }
 
+/*to shift down the menus from the navbar, which is 56px */
+#menus{
+  padding-top: 15px;
+}
+
 #menus .menus-item {
   right: 0;
   margin: 0 0 15px;
@@ -64,6 +69,9 @@ body {
 }
 
 @media (min-width: 767px) {
+  #menus{
+    padding-top: 30px;
+  }
   #menus .menus-item {
     margin: 0 0 30px;
   }
