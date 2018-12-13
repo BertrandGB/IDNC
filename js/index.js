@@ -5,7 +5,29 @@ console.log("JS is started");
 (function($) {
   "use strict"; // Start of use strict
 
+let MenuNode = (menu) => {
+    //create the node
+    var node = document.createElement("div");
+    node.id="generic";
+    node.className="col-lg-3 col-md-4 col-sm-6 menus-item";
+    //fetch the skeleton
+    $.ajax({
+       url:'./skeleton-card.html',
+       type:'GET',
+       success: function(data){
+               console.log(data);
+               node.innerHTML=data;
+               console.log('success3');
+       }
+    });
+    //populate the node with menu json structure
+    //TO DO
+    return node;
+};
 
+
+
+  console.log('IN');
 
   var a = {};
 
