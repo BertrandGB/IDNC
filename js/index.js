@@ -5,87 +5,78 @@ console.log("JS is started");
 (function($) {
   "use strict"; // Start of use strict
 
-        /*test de parsing de JSON
-            var text2 = '{ "employees" : [' +
-            '{ "firstName":"John" , "lastName":"Doe" },' +
-            '{ "firstName":"Anna" , "lastName":"Smith" },' +
-            '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+  console.log("We are in the function");
 
-            var menu=JSON.parse(text2);
+      var requestURL = 'data.json';
+      var request = new XMLHttpRequest();
 
-            console.log(JSON.stringify(menu, undefined, 2));
-        end of Test*/
+      request.open('GET', requestURL);
+      request.responseType = 'json';
 
-
-        //test de parsing de json file
-             var b = {};
-             $.getJSON('./test.json', function(data){
-                 b = data;
-                 console.log(b);
-                 $.each(b, function(idx, elem) {
-                     console.log(idx);
-                     console.log(elem);
-                     console.log(elem.date);
-
-                     const myPromise = new Promise((resolve,reject) => {
-                         document.getElementById('menu-row').appendChild(MenuNode(elem));
-                         resolve('resolved');
-                         reject('rejected');
-                     });
-
-                     myPromise.then(
-                         console.log(document.getElementById(elem.date).childNodes[0]),console.log('error')
-                     );
-                 });
-            });
-
-            console.log(b);
-
-
-    let MenuNode = (menu) => {
-        //create the node
-        console.log(menu.date);
-        var node = document.createElement("div");
-        node.id=menu.date;
-        node.className="col-lg-3 col-md-4 col-sm-6 menus-item";
-        //fetch the skeleton
-        $.ajax({
-           url:'../skeleton-card.html',
-           type:'GET',
-           success: function(data){
-                   console.log(data);
-                   node.innerHTML=data;
-                   console.log(node);
-                   console.log('success3');
-           }
-        });
-        console.log('-------------');
-        console.log(node);
-        console.log('-------------');
-
-
-        //node.getElementById('card-title').appendChild(document.createTextNode(menu.main));
-    //populate the node with menu json structure
-    return node;
-};
-
+      request.send();
+      request.onload = function() {
+          var data = request.response;    //    populateHeader(superHeroes);
+          showCards(data);
+          console.log(JSON.stringify(data));
+          console.log(data);
+      }
 
 /*
-  console.log('IN');
-
-  var a = {};
-
-  $.getJSON('data.json', function(data) {
-      a = data;
-      console.log(a);
-      $.each(a, function(idx, elem) {
-          console.log(idx);
-          console.log(elem);
-          $('table#tbl tbody').append('<tr><td>' + elem.ID + '</td><td>' + elem.Name + '</td><td>' + elem.IDNumber + '</td></tr>');
-      });
-  });
-
+<section id="repas">
+    <div class='container'>
+        <div class="row" id ='repas_row'>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top" src="img/12-05-m.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 */
+    function showCards(jsonObj) {
+        for (var i = 0; i < jsonObj.length; i++) {
+            var myArticle = document.createElement('div');
+            myArticle.className = 'col-lg-3 col-md-4 col-sm-6 menu';
+            var card = document.createElement('div');
+            card.className = 'card';
+            var card_img = document.createElement('img');
+            card_img.className = 'card-img-top';
+            var card_body = document.createElement('div');
+            card_body.className = 'card-body'
+            var card_title = document.createElement('h5');
+            card_title.className = 'card-title';
+            var card_text = document.createElement('p');
+            card_text.className = 'card-text';
+
+            card_img.src = "img/" + jsonObj[i].date + ".jpg"
+
+            var menus = jsonObj[i].menu;
+            for (var j = 0; j < menus.length; j++) {
+                var menu_item = document.createElement('h5');
+                menu_item.className = 'card-title';
+                menu_item.textContent = menus[j];
+                card_body.appendChild(menu_item);
+            };
+
+            card_text.textContent = jsonObj[i].date;
+            card_body.appendChild(card_text);
+
+            card.appendChild(card_img);
+            card.appendChild(card_body);
+
+            myArticle.appendChild(card);
+
+            document.getElementById('repas_row').appendChild(myArticle);
+        }
+    }
+
+
+
 
 
   // Smooth scrolling using jQuery easing

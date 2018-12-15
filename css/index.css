@@ -2,6 +2,33 @@ body {
   padding-top: 54px;
 }
 
+#repas{
+    padding-top: 15px;
+}
+
+#repas .menu{
+    margin-bottom:30px;
+}
+
+#repas .card-body{
+    padding: 0.5rem;
+}
+#repas .card-title{
+    margin-bottom: 0;
+    text-align: center;
+    font-size:1rem;
+}
+#repas .card-text{
+    text-align: center;
+    font-size: 0.5rem;
+    font-style: italic;
+    padding-top: 0.3rem;
+}
+
+
+
+
+
 /*to shift down the menus from the navbar, which is 56px */
 #menus{
   padding-top: 15px;
