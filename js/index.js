@@ -5,6 +5,89 @@ console.log("JS is started");
 (function($) {
   "use strict"; // Start of use strict
 
+        /*test de parsing de JSON
+            var text2 = '{ "employees" : [' +
+            '{ "firstName":"John" , "lastName":"Doe" },' +
+            '{ "firstName":"Anna" , "lastName":"Smith" },' +
+            '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+            var menu=JSON.parse(text2);
+
+            console.log(JSON.stringify(menu, undefined, 2));
+        end of Test*/
+
+
+        //test de parsing de json file
+             var b = {};
+             $.getJSON('./test.json', function(data){
+                 b = data;
+                 console.log(b);
+                 $.each(b, function(idx, elem) {
+                     console.log(idx);
+                     console.log(elem);
+                     console.log(elem.date);
+
+                     const myPromise = new Promise((resolve,reject) => {
+                         document.getElementById('menu-row').appendChild(MenuNode(elem));
+                         resolve('resolved');
+                         reject('rejected');
+                     });
+
+                     myPromise.then(
+                         console.log(document.getElementById(elem.date).childNodes[0]),console.log('error')
+                     );
+                 });
+            });
+
+            console.log(b);
+
+
+    let MenuNode = (menu) => {
+        //create the node
+        console.log(menu.date);
+        var node = document.createElement("div");
+        node.id=menu.date;
+        node.className="col-lg-3 col-md-4 col-sm-6 menus-item";
+        //fetch the skeleton
+        $.ajax({
+           url:'../skeleton-card.html',
+           type:'GET',
+           success: function(data){
+                   console.log(data);
+                   node.innerHTML=data;
+                   console.log(node);
+                   console.log('success3');
+           }
+        });
+        console.log('-------------');
+        console.log(node);
+        console.log('-------------');
+
+
+        //node.getElementById('card-title').appendChild(document.createTextNode(menu.main));
+    //populate the node with menu json structure
+    return node;
+};
+
+
+/*
+  console.log('IN');
+
+  var a = {};
+
+  $.getJSON('data.json', function(data) {
+      a = data;
+      console.log(a);
+      $.each(a, function(idx, elem) {
+          console.log(idx);
+          console.log(elem);
+          $('table#tbl tbody').append('<tr><td>' + elem.ID + '</td><td>' + elem.Name + '</td><td>' + elem.IDNumber + '</td></tr>');
+      });
+  });
+
+*/
+
+
   // Smooth scrolling using jQuery easing
   // Select all links with hashes
   // standard code from https://css-tricks.com/snippets/jquery/smooth-scrolling/
