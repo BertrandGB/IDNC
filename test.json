@@ -1,0 +1,38 @@
+[
+    {
+        "date":"6-12-midi",
+        "main":"toto",
+        "detail": [
+                        {
+                            "plat":"carottes"
+                        },
+                        {
+                            "plat":"toto"
+                        },
+                        {
+                            "plat":"yagourt"
+                        },
+                        {
+                            "plat":"tarte"
+                        }
+                    ]
+    },
+    {
+        "date":"7-12-midi",
+        "main":"tutu",
+        "detail": [
+                        {
+                            "plat":"carottes"
+                        },
+                        {
+                            "plat":"toto"
+                        },
+                        {
+                            "plat":"yagourt"
+                        },
+                        {
+                            "plat":"tarte"
+                        }
+                    ]
+    }
+]
