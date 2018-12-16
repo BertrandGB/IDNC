@@ -53,7 +53,15 @@ console.log("JS is started");
             var card_text = document.createElement('p');
             card_text.className = 'card-text';
 
-            card_img.src = "img/" + jsonObj[i].date + "-thumbnail.jpg"
+            card_img.src = "img/" + jsonObj[i].date + "-thumbnail.jpg";
+
+            var att1 = document.createAttribute("data-toggle");
+            var att2 = document.createAttribute("data-target");
+            att1.value = "modal";
+            att2.value ='#'+jsonObj[i].date;
+            card_img.setAttributeNode(att1);
+            card_img.setAttributeNode(att2);
+
 
             var menus = jsonObj[i].menu;
             for (var j = 0; j < menus.length; j++) {

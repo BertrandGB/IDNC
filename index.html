@@ -43,13 +43,23 @@
         </nav>
     </section>
 
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Launch demo modal
+    </button>
+
+
+
     <section id="repas">
         <div class='container'>
             <div class="row" id ='repas_row'>
                 <!-- HERE WILL WE INSERT THE CARDS -->
-                <!--<div class="col-lg-3 col-md-4 col-sm-6 menu">
+
+                <!-- test div -->
+                <div class="col-lg-3 col-md-4 col-sm-6 menu">
                         <div class="card">
-                            <img class="card-img-top" src="img/12-05-m.jpg" alt="Card image cap">
+                            <img class="card-img-top" data-toggle="modal" data-target="#exampleModal" src="img/02-12-2018 MIDI-thumbnail.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <h5 class="card-title">Card title</h5>
@@ -57,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                -->
+
             </div>
         </div>
     </section>
@@ -93,7 +103,7 @@
     <!-- Menu cards -->
     <section id="menus-modal">
         <!-- Modal code -->
-        <div class="menus-modal modal fade" tabindex="-1" role="dialog" id="menusModal2" aria-hidden="true">
+        <div class="menus-modal modal fade" tabindex="-1" role="dialog" id="exampleModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="container">
