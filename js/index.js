@@ -53,7 +53,7 @@ console.log("JS is started");
             var card_text = document.createElement('p');
             card_text.className = 'card-text';
 
-            card_img.src = "img/" + jsonObj[i].date + ".jpg"
+            card_img.src = "img/" + jsonObj[i].date + "-thumbnail.jpg"
 
             var menus = jsonObj[i].menu;
             for (var j = 0; j < menus.length; j++) {
