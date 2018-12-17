@@ -38,44 +38,59 @@ console.log("JS is started");
         </div>
     </div>
 */
-
-    function createModal(jsonRepas) {
+/*        <div class="detail-modal modal fade" id="exampleModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="container">
+                        <div class="row justify-content-md-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card">
+                                    <img class="card-img" src="img/Plate.jpg" alt="">
+                        <div class="modal-body">
+                            <p>Salsifis vinaigrette</p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+*/
+    function createModal(data) {
         var myModal= document.createElement('div');
             myModal.className="detail-modal modal fade";
-        var tagRef=jsonRepas.date;
-            tagRef=tagRef.substring(0,tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
-            console.log(tagRef);
-            myModal.setAttribute("id", tagRef);
-        var modal_dialog= document.createElement('div');
+        var tagRef=data.date
+            tagRef=tagRef.substring(0, tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+            console.log("Modal href = ",tagRef);
+            myModal.setAttribute("id",tagRef);
+        var modal_dialog=document.createElement('div');
             modal_dialog.className="modal-dialog modal-dialog-centered";
-        var modal_content= document.createElement('div');
+        var modal_content=document.createElement('div');
             modal_content.className="modal-content";
-        var modal_container= document.createElement('div');
+        var modal_container=document.createElement('div');
             modal_container.className="container";
-        var modal_row= document.createElement('div');
+        var modal_row=document.createElement("div");
             modal_row.className="row justify-content-md-center";
+        var modal_col=document.createElement("div");
+            modal_col.className="col-lg-3 col-md-4 col-sm-6";
+        var modal_body=document.createElement("div");
+            modal_body.className="modal-body";
 
-        var modal_details= document.createElement('div');
-            modal_details.className="modal-body";
-
-        var jsonDetails = jsonRepas.detail;
-            for (var j = 0; j < jsonDetails.length; j++) {
-                var detail_item = document.createElement('p');
-                detail_item.textContent = jsonDetails[j];
-                modal_details.appendChild(detail_item);
+            var details = data.detail;
+            for (var j = 0; j < details.length; j++) {
+                var modal_detail = document.createElement('p');
+                modal_detail.textContent = details[j];
+                modal_body.appendChild(modal_detail);
             };
 
+        var modal_footer=document.createElement("div");
+            modal_footer.className="modal-footer";
+            modal_footer.innerHTML='<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
 
-        var modal_footer= document.createElement('div');
-            modal_footer.innerHTML='<div class="modal-footer">'+
-            '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
 
         myModal.appendChild(modal_dialog);
         modal_dialog.appendChild(modal_content);
         modal_content.appendChild(modal_container);
         modal_container.appendChild(modal_row);
-        modal_container.appendChild(modal_details);
+        modal_container.appendChild(modal_body);
         modal_container.appendChild(modal_footer);
+
         document.getElementById('details').appendChild(myModal);
 
     };
@@ -104,12 +119,11 @@ console.log("JS is started");
             card_img.setAttributeNode(att1);
 
             var att2 = document.createAttribute("data-target");
-            var tagRef="#"+jsonObj[i].date;
-                tagRef=tagRef.substring(0,tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
-                console.log('ref parent = '+ tagRef);
-            att2.value =tagRef;
+            var tagRef=jsonObj[i].date;
+                tagRef=tagRef.substring(0, tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+                console.log("Parent href = ",tagRef);
+            att2.value ='#'+tagRef;
             card_img.setAttributeNode(att2);
-
 
             var menus = jsonObj[i].menu;
             for (var j = 0; j < menus.length; j++) {
@@ -128,6 +142,7 @@ console.log("JS is started");
             myArticle.appendChild(card);
 
             document.getElementById('repas_row').appendChild(myArticle);
+
             createModal(jsonObj[i]);
         }
     }
