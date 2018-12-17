@@ -13,8 +13,6 @@
             "Orange",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "29-11-2018 SOIR",
@@ -29,8 +27,6 @@
             "Poire au sirop léger vanillée",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "30-11-2018 MIDI",
@@ -46,8 +42,6 @@
             "Roto grütze",
             "Pain complet 40G",
             "Huile midi 10 G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "30-11-2018 SOIR",
@@ -63,8 +57,6 @@
             "Banane",
             "Pain complet 20G",
             "Huile soir 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "01-12-2018 MIDI",
@@ -81,8 +73,6 @@
             "Kiwis",
             "Pain complet",
             "Huile midi 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "01-12-2018 SOIR",
@@ -99,8 +89,6 @@
             "Purée de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "02-12-2018 MIDI",
@@ -117,9 +105,6 @@
             "Gâteau chocolat",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "02-12-2018 MIDI1.jpg"
         ]
     }, {
         "date": "02-12-2018 SOIR",
@@ -136,9 +121,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "02-12-2018 SOIR1.jpg"
         ]
     }, {
         "date": "03-12-2018 MIDI",
@@ -155,11 +137,6 @@
             "Purée de fruits",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "03-12-2018 MIDI1.jpg",
-            "03-12-2018 MIDI2.jpg",
-            "03-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "03-12-2018 SOIR",
@@ -176,10 +153,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "03-12-2018 SOIR1.jpg",
-            "03-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "04-12-2018 MIDI",
@@ -195,10 +168,6 @@
             "Crème à la vanille",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "04-12-2018 MIDI1.jpg",
-            "04-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "04-12-2018 SOIR",
@@ -215,9 +184,6 @@
             "Fruit de saison",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "04-12-2018 SOIR1.jpg"
         ]
     }, {
         "date": "05-12-2018 MIDI",
@@ -234,10 +200,6 @@
             "Orange",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "05-12-2018 MIDI1.jpg",
-            "05-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "05-12-2018 SOIR",
@@ -252,10 +214,6 @@
             "Pêche au sirop au naturel",
             "Pain complet 40 G",
             "Huile soir 10 G"
-        ],
-        "photo":[
-            "05-12-2018 SOIR1.jpg",
-            "05-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "06-12-2018 MIDI",
@@ -272,10 +230,6 @@
             "Raisin",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "06-12-2018 MIDI1.jpg",
-            "06-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "06-12-2018 SOIR",
@@ -292,11 +246,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "06-12-2018 SOIR1.jpg",
-            "06-12-2018 SOIR2.jpg",
-            "06-12-2018 SOIR3.jpg"
         ]
     }, {
         "date": "07-12-2018 MIDI",
@@ -313,11 +262,6 @@
             "Kiwi",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "07-12-2018 MIDI1.jpg",
-            "07-12-2018 MIDI2.jpg",
-            "07-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "07-12-2018 SOIR",
@@ -332,11 +276,6 @@
             "Salade de fruits frais",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "07-12-2018 SOIR1.jpg",
-            "07-12-2018 SOIR2.jpg",
-            "07-12-2018 SOIR3.jpg"
         ]
     }, {
         "date": "08-12-2018 MIDI",
@@ -353,10 +292,6 @@
             "Purée de fruits",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "08-12-2018 MIDI1.jpg",
-            "08-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "08-12-2018 SOIR",
@@ -373,12 +308,6 @@
             "Poire",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "08-12-2018 SOIR1.jpg",
-            "08-12-2018 SOIR2.jpg",
-            "08-12-2018 SOIR3.jpg",
-            "08-12-2018 SOIR4.jpg"
         ]
     }, {
         "date": "09-12-2018 MIDI",
@@ -394,11 +323,6 @@
             "Clafouti poires chocolat",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "09-12-2018 MIDI1.jpg",
-            "09-12-2018 MIDI2.jpg",
-            "09-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "09-12-2018 SOIR",
@@ -415,11 +339,6 @@
             "Fruit de saison",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "09-12-2018 SOIR1.jpg",
-            "09-12-2018 SOIR2.jpg",
-            "09-12-2018 SOIR3.jpg"
         ]
     }, {
         "date": "10-12-2018 MIDI",
@@ -436,11 +355,6 @@
             "Pomme au four à la cannelle",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "10-12-2018 MIDI1.jpg",
-            "10-12-2018 MIDI2.jpg",
-            "10-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "10-12-2018 SOIR",
@@ -457,10 +371,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "10-12-2018 SOIR1.jpg",
-            "10-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "11-12-2018 MIDI",
@@ -477,10 +387,6 @@
             "Poire",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "11-12-2018 MIDI1.jpg",
-            "11-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "11-12-2018 SOIR",
@@ -495,11 +401,6 @@
             "Entremet chocolat",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "11-12-2018 SOIR1.jpg",
-            "11-12-2018 SOIR2.jpg",
-            "11-12-2018 SOIR3.jpg"
         ]
     }, {
         "date": "12-12-2018 MIDI",
@@ -516,11 +417,6 @@
             "Salade de fruits frais",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "12-12-2018 MIDI1.jpg",
-            "12-12-2018 MIDI2.jpg",
-            "12-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "12-12-2018 SOIR",
@@ -535,10 +431,6 @@
             "Purée de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "12-12-2018 SOIR1.jpg",
-            "12-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "13-12-2018 MIDI",
@@ -555,10 +447,6 @@
             "Orange",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "13-12-2018 MIDI1.jpg",
-            "13-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "13-12-2018 SOIR",
@@ -575,10 +463,6 @@
             "Banane",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "13-12-2018 SOIR1.jpg",
-            "13-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "14-12-2018 MIDI",
@@ -595,11 +479,6 @@
             "Purée de fruits",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "14-12-2018 MIDI1.jpg",
-            "14-12-2018 MIDI2.jpg",
-            "14-12-2018 MIDI3.jpg"
         ]
     }, {
         "date": "14-12-2018 SOIR",
@@ -614,10 +493,6 @@
             "Poire",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "14-12-2018 SOIR1.jpg",
-            "14-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "15-12-2018 MIDI",
@@ -634,10 +509,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
-            "15-12-2018 MIDI1.jpg",
-            "15-12-2018 MIDI2.jpg"
         ]
     }, {
         "date": "15-12-2018 SOIR",
@@ -654,10 +525,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
-            "15-12-2018 SOIR1.jpg",
-            "15-12-2018 SOIR2.jpg"
         ]
     }, {
         "date": "16-12-2018 MIDI",
@@ -673,8 +540,6 @@
             "Pain perdu au caramel",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "16-12-2018 SOIR",
@@ -690,8 +555,6 @@
             "Corbeille de fruits",
             "Pain complet 40 G ",
             "Huile soir 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "17-12-2018 MIDI",
@@ -708,8 +571,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "17-12-2018 SOIR",
@@ -726,8 +587,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "18-12-2018 MIDI",
@@ -744,8 +603,6 @@
             "Orange",
             "Pain complet 40G",
             "Huile midi 10G"
-        ],
-        "photo":[
         ]
     }, {
         "date": "18-12-2018 SOIR",
@@ -762,8 +619,6 @@
             "Corbeille de fruits",
             "Pain complet 40G",
             "Huile soir 10G]"
-        ],
-        "photo":[
         ]
     }
 ]
