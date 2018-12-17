@@ -5,8 +5,6 @@ console.log("JS is started");
 (function($) {
   "use strict"; // Start of use strict
 
-  console.log("We are in the function");
-
       var requestURL = 'data.json';
       var request = new XMLHttpRequest();
 
@@ -17,27 +15,67 @@ console.log("JS is started");
       request.onload = function() {
           var data = request.response;    //    populateHeader(superHeroes);
           showCards(data);
-          console.log(JSON.stringify(data));
-          console.log(data);
       }
 
-/*
-<section id="repas">
-    <div class='container'>
-        <div class="row" id ='repas_row'>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card">
-                    <img class="card-img-top" src="img/12-05-m.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-*/
+    function createModalCard(parent,photo){
+        var modal_col=document.createElement("div");
+            modal_col.className="col-lg-3 col-md-4 col-sm-6";
+        var modal_card=document.createElement("div");
+            modal_card.className="card";
+        var modal_card_img = document.createElement('img');
+            modal_card_img.className = 'card-img';
+            modal_card_img.src = "img/" + photo;
+        parent.appendChild(modal_col);
+        modal_col.appendChild(modal_card);
+        modal_card.appendChild(modal_card_img);
+    };
+
+
+    function createModal(data) {
+        var myModal= document.createElement('div');
+            myModal.className="detail-modal modal fade";
+        var tagRef=data.date
+            tagRef=tagRef.substring(0, tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+            myModal.setAttribute("id",tagRef);
+        var modal_dialog=document.createElement('div');
+            modal_dialog.className="modal-dialog modal-dialog-centered";
+        var modal_content=document.createElement('div');
+            modal_content.className="modal-content";
+        var modal_container=document.createElement('div');
+            modal_container.className="container";
+        var modal_row=document.createElement("div");
+            modal_row.className="row justify-content-md-center";
+
+        var photos=data.photo;
+        for (var j = 0; j < photos.length; j++) {
+            createModalCard(modal_row,photos[j]);
+        };
+
+        var modal_body=document.createElement("div");
+            modal_body.className="modal-body";
+
+        var details = data.detail;
+        for (var j = 0; j < details.length; j++) {
+            var modal_detail = document.createElement('p');
+            modal_detail.textContent = details[j];
+            modal_body.appendChild(modal_detail);
+        };
+
+        var modal_footer=document.createElement("div");
+            modal_footer.className="modal-footer";
+            modal_footer.innerHTML='<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
+
+        myModal.appendChild(modal_dialog);
+        modal_dialog.appendChild(modal_content);
+        modal_content.appendChild(modal_container);
+        modal_container.appendChild(modal_row);
+        modal_container.appendChild(modal_body);
+        modal_container.appendChild(modal_footer);
+
+        document.getElementById('details').appendChild(myModal);
+
+    };
+
     function showCards(jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
             var myArticle = document.createElement('div');
@@ -59,11 +97,19 @@ console.log("JS is started");
             var att1 = document.createAttribute("data-toggle");
             att1.value = "modal";
             card_img.setAttributeNode(att1);
+<<<<<<< HEAD
 
             var att2 = document.createAttribute("data-target");
             att2.value ='#'+jsonObj[i].date;
             card_img.setAttributeNode(att2);
+=======
+>>>>>>> 262f0f7c192f65e6ba83ddf325265507168a81d6
 
+            var att2 = document.createAttribute("data-target");
+            var tagRef=jsonObj[i].date;
+                tagRef=tagRef.substring(0, tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+            att2.value ='#'+tagRef;
+            card_img.setAttributeNode(att2);
 
             var menus = jsonObj[i].menu;
             for (var j = 0; j < menus.length; j++) {
@@ -82,6 +128,8 @@ console.log("JS is started");
             myArticle.appendChild(card);
 
             document.getElementById('repas_row').appendChild(myArticle);
+
+            createModal(jsonObj[i]);
         }
     }
 

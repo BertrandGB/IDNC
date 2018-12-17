@@ -31,6 +31,10 @@ body {
 
 #details .detail-modal .container{
   padding-top: 16px;
+<<<<<<< HEAD
+=======
+  padding-bottom: 16px;
+>>>>>>> 262f0f7c192f65e6ba83ddf325265507168a81d6
 }
 
 #details .detail-modal .modal-dialog {
@@ -40,7 +44,10 @@ body {
 
 #details .detail-modal .modal-body {
   text-align: center;
+<<<<<<< HEAD
   padding-bottom: 0;
+=======
+>>>>>>> 262f0f7c192f65e6ba83ddf325265507168a81d6
 }
 
 #details .detail-modal .modal-body p {
@@ -50,7 +57,12 @@ body {
 #details .detail-modal .modal-footer {
   display: block;
   text-align: center;
+<<<<<<< HEAD
   border-top: none;
+=======
+  border: none;
+  padding:0;
+>>>>>>> 262f0f7c192f65e6ba83ddf325265507168a81d6
 }
 
 /*to shift down the menus from the navbar, which is 56px */
