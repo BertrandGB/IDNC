@@ -57,7 +57,7 @@
                 <!-- HERE WILL WE INSERT THE CARDS -->
 
                 <!-- test div -->
-                <div class="col-lg-3 col-md-4 col-sm-6 menu">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card">
                             <img class="card-img-top" data-toggle="modal" data-target="#exampleModal" src="img/02-12-2018 MIDI-thumbnail.jpg" alt="Card image cap">
                             <div class="card-body">
@@ -101,22 +101,29 @@
     </footer>
 
     <!-- Menu cards -->
-    <section id="menus-modal">
+    <section id="details">
         <!-- Modal code -->
-        <div class="menus-modal modal fade" tabindex="-1" role="dialog" id="exampleModal" aria-hidden="true">
+        <div class="detail-modal modal fade" id="exampleModal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-                                <img class="card-img" src="img/12-05-m.jpg" alt="">
+                        <div class="row justify-content-md-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card">
+                                    <img class="card-img" src="img/Plate.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <img class="card-img" src="img/12-05-m.jpg" alt="">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card">
+                                    <img class="card-img" src="img/Plate.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <img class="card-img" src="img/12-05-m.jpg" alt="">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card">
+                                    <img class="card-img" src="img/Plate.jpg" alt="">
+                                </div>
                             </div>
+
                         </div>
                         <div class="modal-body">
                             <p>Salsifis vinaigrette</p>
@@ -128,7 +135,10 @@
                             <p>Pain complet 40G</p>
                             <p>Huile midi 10G</p>
                         </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>

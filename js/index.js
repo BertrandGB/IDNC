@@ -55,11 +55,13 @@ console.log("JS is started");
 
             card_img.src = "img/" + jsonObj[i].date + "-thumbnail.jpg";
 
+            //definition of modal
             var att1 = document.createAttribute("data-toggle");
-            var att2 = document.createAttribute("data-target");
             att1.value = "modal";
-            att2.value ='#'+jsonObj[i].date;
             card_img.setAttributeNode(att1);
+
+            var att2 = document.createAttribute("data-target");
+            att2.value ='#'+jsonObj[i].date;
             card_img.setAttributeNode(att2);
 
 
@@ -151,11 +153,11 @@ console.log("JS is started");
   $(window).scroll(navbarCollapse);
 
   // Hide navbar when modals trigger
-  $('.menus-modal').on('show.bs.modal', function(e) {
+  $('.detail-modal').on('show.bs.modal', function(e) {
     $('.navbar').addClass('d-none');
     console.log("add");
   })
-  $('.menus-modal').on('hidden.bs.modal', function(e) {
+  $('.detail-modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
     console.log("remove");
   })
