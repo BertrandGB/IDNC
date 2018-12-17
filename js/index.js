@@ -194,11 +194,11 @@ console.log("JS is started");
   $(window).scroll(navbarCollapse);
 
   // Hide navbar when modals trigger
-  $('.detail-modal').on('show.bs.modal', function(e) {
+  $('.modal').on('show.bs.modal', function(e) {
     $('.navbar').addClass('d-none');
     console.log("add");
   })
-  $('.detail-modal').on('hidden.bs.modal', function(e) {
+  $('.modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
     console.log("remove");
   })
