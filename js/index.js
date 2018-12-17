@@ -38,6 +38,49 @@ console.log("JS is started");
         </div>
     </div>
 */
+
+    function createModal(jsonRepas) {
+        var myModal= document.createElement('div');
+            myModal.className="detail-modal modal fade";
+        var tagRef=jsonRepas.date;
+            tagRef=tagRef.substring(0,tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+            console.log(tagRef);
+            myModal.setAttribute("id", tagRef);
+        var modal_dialog= document.createElement('div');
+            modal_dialog.className="modal-dialog modal-dialog-centered";
+        var modal_content= document.createElement('div');
+            modal_content.className="modal-content";
+        var modal_container= document.createElement('div');
+            modal_container.className="container";
+        var modal_row= document.createElement('div');
+            modal_row.className="row justify-content-md-center";
+
+        var modal_details= document.createElement('div');
+            modal_details.className="modal-body";
+
+        var jsonDetails = jsonRepas.detail;
+            for (var j = 0; j < jsonDetails.length; j++) {
+                var detail_item = document.createElement('p');
+                detail_item.textContent = jsonDetails[j];
+                modal_details.appendChild(detail_item);
+            };
+
+
+        var modal_footer= document.createElement('div');
+            modal_footer.innerHTML='<div class="modal-footer">'+
+            '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
+
+        myModal.appendChild(modal_dialog);
+        modal_dialog.appendChild(modal_content);
+        modal_content.appendChild(modal_container);
+        modal_container.appendChild(modal_row);
+        modal_container.appendChild(modal_details);
+        modal_container.appendChild(modal_footer);
+        document.getElementById('details').appendChild(myModal);
+
+    };
+
+
     function showCards(jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
             var myArticle = document.createElement('div');
@@ -55,11 +98,16 @@ console.log("JS is started");
 
             card_img.src = "img/" + jsonObj[i].date + "-thumbnail.jpg";
 
+            //definition of modal
             var att1 = document.createAttribute("data-toggle");
-            var att2 = document.createAttribute("data-target");
             att1.value = "modal";
-            att2.value ='#'+jsonObj[i].date;
             card_img.setAttributeNode(att1);
+
+            var att2 = document.createAttribute("data-target");
+            var tagRef="#"+jsonObj[i].date;
+                tagRef=tagRef.substring(0,tagRef.length-5)+tagRef.substring(tagRef.length-4,tagRef.length);
+                console.log('ref parent = '+ tagRef);
+            att2.value =tagRef;
             card_img.setAttributeNode(att2);
 
 
@@ -80,6 +128,7 @@ console.log("JS is started");
             myArticle.appendChild(card);
 
             document.getElementById('repas_row').appendChild(myArticle);
+            createModal(jsonObj[i]);
         }
     }
 
@@ -151,11 +200,11 @@ console.log("JS is started");
   $(window).scroll(navbarCollapse);
 
   // Hide navbar when modals trigger
-  $('.menus-modal').on('show.bs.modal', function(e) {
+  $('.detail-modal').on('show.bs.modal', function(e) {
     $('.navbar').addClass('d-none');
     console.log("add");
   })
-  $('.menus-modal').on('hidden.bs.modal', function(e) {
+  $('.detail-modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
     console.log("remove");
   })

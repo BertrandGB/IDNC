@@ -25,31 +25,52 @@ body {
     padding-top: 0.3rem;
 }
 
+#details .detail-modal{
+  padding-right: 0px !important;
+}
 
+#details .detail-modal .container{
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 
+#details .detail-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
 
+#details .detail-modal .modal-body {
+  text-align: center;
+}
+
+#details .detail-modal .modal-body p {
+  margin-bottom: 0;
+}
+
+#details .detail-modal .modal-footer {
+  display: block;
+  text-align: center;
+  border: none;
+  padding:0;
+}
 
 /*to shift down the menus from the navbar, which is 56px */
 #menus{
   padding-top: 15px;
 }
-
 #menus .menus-item {
   right: 0;
   margin: 0 0 15px;
 }
-
 #menus .menus-item .card-body{
     padding: 0;
 }
-
 #menus .menus-item .card-title {
     font-size: 1rem;
     text-align: center;
     padding-top:0.5rem;
     margin-bottom: 0;
 }
-
 #menus .menus-item .card-text {
     text-align: center;
     font-size: 0.5rem;
@@ -57,7 +78,6 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-
 #menus .menus-item .menus-link {
   position: relative;
   display: block;
@@ -65,7 +85,6 @@ body {
   margin: 0 auto;
   cursor: pointer;
 }
-
 #menus .menus-item .menus-link .menus-hover {
   position: absolute;
   width: 100%;
@@ -75,11 +94,9 @@ body {
   opacity: 0;
   background: rgba(254, 209, 54, 0.9);
 }
-
 #menus .menus-item .menus-link .menus-hover:hover {
   opacity: 1;
 }
-
 #menus .menus-item .menus-link .menus-hover .menus-hover-content {
   font-size: 20px;
   position: absolute;
@@ -90,11 +107,9 @@ body {
   text-align: center;
   color: white;
 }
-
 #menus .menus-item .menus-link .menus-hover .menus-hover-content i {
   margin-top: -12px;
 }
-
 @media (min-width: 767px) {
   #menus{
     padding-top: 30px;
@@ -103,6 +118,8 @@ body {
     margin: 0 0 30px;
   }
 }
+
+
 
 #menus-modal .menus-modal {
   padding-right: 0px !important;
