@@ -95,7 +95,6 @@ console.log("JS is started");
 
     };
 
-
     function showCards(jsonObj) {
         for (var i = 0; i < jsonObj.length; i++) {
             var myArticle = document.createElement('div');
