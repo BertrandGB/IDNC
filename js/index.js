@@ -13,7 +13,7 @@ console.log("JS is started");
 
       request.send();
       request.onload = function() {
-          var data = request.response;    //    populateHeader(superHeroes);
+          var data = request.response;
           showCards(data);
       }
 
@@ -97,13 +97,6 @@ console.log("JS is started");
             var att1 = document.createAttribute("data-toggle");
             att1.value = "modal";
             card_img.setAttributeNode(att1);
-<<<<<<< HEAD
-
-            var att2 = document.createAttribute("data-target");
-            att2.value ='#'+jsonObj[i].date;
-            card_img.setAttributeNode(att2);
-=======
->>>>>>> 262f0f7c192f65e6ba83ddf325265507168a81d6
 
             var att2 = document.createAttribute("data-target");
             var tagRef=jsonObj[i].date;
@@ -201,11 +194,11 @@ console.log("JS is started");
   $(window).scroll(navbarCollapse);
 
   // Hide navbar when modals trigger
-  $('.detail-modal').on('show.bs.modal', function(e) {
+  $('.detail-modal').on('show.bs.modal', function() {
     $('.navbar').addClass('d-none');
     console.log("add");
   })
-  $('.detail-modal').on('hidden.bs.modal', function(e) {
+  $('.detail-modal').on('hidden.bs.modal', function() {
     $('.navbar').removeClass('d-none');
     console.log("remove");
   })
